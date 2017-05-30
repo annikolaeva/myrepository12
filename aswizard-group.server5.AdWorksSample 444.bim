@@ -4,7 +4,7 @@
   "compatibilityLevel": 1200,
   "model": {
     "name": "AdWorksSample 444",
-    "description": "A Tabular data model at the 1200 compatibility levelcommit.",
+    "description": "A Tabular data model at the 1200 compatibility levelcommit1.",
     "defaultMode": "directQuery",
     "culture": "en-US",
     "dataSources": [
