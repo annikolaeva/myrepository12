@@ -1,0 +1,1258 @@
+{
+  "name": "AdWorksSample 444",
+  "description": "Imported database from sql server 'analytics-db-server.database.windows.net' and database 'AdWorksSample'",
+  "compatibilityLevel": 1200,
+  "model": {
+    "name": "AdWorksSample 444",
+    "description": "A Tabular data model at the 1200 compatibility levelcommit.",
+    "defaultMode": "directQuery",
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample",
+        "description": "A data source definition that uses explicit sql server credentials from connection string",
+        "connectionString": "Provider=SQLNCLI11;Server=tcp:analytics-db-server.database.windows.net;Initial Catalog=AdWorksSample;Persist Security Info=False;User ID=analytics_admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30",
+        "impersonationMode": "impersonateServiceAccount"
+      }
+    ],
+    "tables": [
+      {
+        "name": "SalesLT.Customer",
+        "description": "All data from SalesLT.Customer, and that",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CustomerID"
+          },
+          {
+            "name": "NameStyle",
+            "dataType": "boolean",
+            "isNullable": false,
+            "sourceColumn": "NameStyle",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "FirstName",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "MiddleName",
+            "dataType": "string",
+            "sourceColumn": "MiddleName",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "LastName",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "Suffix",
+            "dataType": "string",
+            "sourceColumn": "Suffix",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "CompanyName",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "SalesPerson",
+            "dataType": "string",
+            "sourceColumn": "SalesPerson",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "EmailAddress",
+            "dataType": "string",
+            "sourceColumn": "EmailAddress",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "Phone",
+            "dataType": "string",
+            "sourceColumn": "Phone",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "PasswordHash",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "PasswordHash",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "PasswordSalt",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "PasswordSalt",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 14
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.Customer",
+            "source": {
+              "query": "SELECT [CustomerID],[NameStyle],[Title],[FirstName],[MiddleName],[LastName],[Suffix],[CompanyName],[SalesPerson],[EmailAddress],[Phone],[PasswordHash],[PasswordSalt],[rowguid],[ModifiedDate] FROM SalesLT.Customer",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductModel",
+        "description": "All data from SalesLT.ProductModel",
+        "columns": [
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductModelID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "CatalogDescription",
+            "dataType": "string",
+            "sourceColumn": "CatalogDescription",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductModel",
+            "source": {
+              "query": "SELECT [ProductModelID],[Name],[CatalogDescription],[rowguid],[ModifiedDate] FROM SalesLT.ProductModel",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductDescription",
+        "description": "All data from SalesLT.ProductDescription",
+        "columns": [
+          {
+            "name": "ProductDescriptionID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductDescriptionID"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Description",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 3
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductDescription",
+            "source": {
+              "query": "SELECT [ProductDescriptionID],[Description],[rowguid],[ModifiedDate] FROM SalesLT.ProductDescription",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.Product",
+        "description": "All data from SalesLT.Product",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "ProductNumber",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ProductNumber",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "StandardCost",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "StandardCost",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "ListPrice",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "ListPrice",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "Size",
+            "dataType": "string",
+            "sourceColumn": "Size",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "Weight",
+            "dataType": "decimal",
+            "sourceColumn": "Weight",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "ProductCategoryID",
+            "dataType": "int64",
+            "sourceColumn": "ProductCategoryID",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "sourceColumn": "ProductModelID",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "SellStartDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "SellStartDate",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "SellEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "SellEndDate",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "DiscontinuedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "DiscontinuedDate",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "ThumbNailPhoto",
+            "dataType": "binary",
+            "sourceColumn": "ThumbNailPhoto",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "ThumbnailPhotoFileName",
+            "dataType": "string",
+            "sourceColumn": "ThumbnailPhotoFileName",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 16
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.Product",
+            "source": {
+              "query": "SELECT [ProductID],[Name],[ProductNumber],[Color],[StandardCost],[ListPrice],[Size],[Weight],[ProductCategoryID],[ProductModelID],[SellStartDate],[SellEndDate],[DiscontinuedDate],[ThumbNailPhoto],[ThumbnailPhotoFileName],[rowguid],[ModifiedDate] FROM SalesLT.Product",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductModelProductDescription",
+        "description": "All data from SalesLT.ProductModelProductDescription",
+        "columns": [
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductModelID"
+          },
+          {
+            "name": "ProductDescriptionID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductDescriptionID",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "Culture",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Culture",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductModelProductDescription",
+            "source": {
+              "query": "SELECT [ProductModelID],[ProductDescriptionID],[Culture],[rowguid],[ModifiedDate] FROM SalesLT.ProductModelProductDescription",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductCategory",
+        "description": "All data from SalesLT.ProductCategory",
+        "columns": [
+          {
+            "name": "ProductCategoryID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductCategoryID"
+          },
+          {
+            "name": "ParentProductCategoryID",
+            "dataType": "int64",
+            "sourceColumn": "ParentProductCategoryID",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductCategory",
+            "source": {
+              "query": "SELECT [ProductCategoryID],[ParentProductCategoryID],[Name],[rowguid],[ModifiedDate] FROM SalesLT.ProductCategory",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "BuildVersion",
+        "description": "All data from BuildVersion",
+        "columns": [
+          {
+            "name": "SystemInformationID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SystemInformationID"
+          },
+          {
+            "name": "Database Version",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Database Version",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "VersionDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "VersionDate",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 3
+          }
+        ],
+        "partitions": [
+          {
+            "name": "BuildVersion",
+            "source": {
+              "query": "SELECT [SystemInformationID],[Database Version],[VersionDate],[ModifiedDate] FROM BuildVersion",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ErrorLog",
+        "description": "All data from ErrorLog",
+        "columns": [
+          {
+            "name": "ErrorLogID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ErrorLogID"
+          },
+          {
+            "name": "ErrorTime",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ErrorTime",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "UserName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "UserName",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ErrorNumber",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ErrorNumber",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ErrorSeverity",
+            "dataType": "int64",
+            "sourceColumn": "ErrorSeverity",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "ErrorState",
+            "dataType": "int64",
+            "sourceColumn": "ErrorState",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "ErrorProcedure",
+            "dataType": "string",
+            "sourceColumn": "ErrorProcedure",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "ErrorLine",
+            "dataType": "int64",
+            "sourceColumn": "ErrorLine",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "ErrorMessage",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ErrorMessage",
+            "displayOrdinal": 8
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ErrorLog",
+            "source": {
+              "query": "SELECT [ErrorLogID],[ErrorTime],[UserName],[ErrorNumber],[ErrorSeverity],[ErrorState],[ErrorProcedure],[ErrorLine],[ErrorMessage] FROM ErrorLog",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.Address",
+        "description": "All data from SalesLT.Address",
+        "columns": [
+          {
+            "name": "AddressID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "AddressID"
+          },
+          {
+            "name": "AddressLine1",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "AddressLine1",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "AddressLine2",
+            "dataType": "string",
+            "sourceColumn": "AddressLine2",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "City",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "StateProvince",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "StateProvince",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "CountryRegion",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "CountryRegion",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "PostalCode",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "PostalCode",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 8
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.Address",
+            "source": {
+              "query": "SELECT [AddressID],[AddressLine1],[AddressLine2],[City],[StateProvince],[CountryRegion],[PostalCode],[rowguid],[ModifiedDate] FROM SalesLT.Address",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.CustomerAddress",
+        "description": "All data from SalesLT.CustomerAddress",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CustomerID"
+          },
+          {
+            "name": "AddressID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "AddressID",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "AddressType",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "AddressType",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.CustomerAddress",
+            "source": {
+              "query": "SELECT [CustomerID],[AddressID],[AddressType],[rowguid],[ModifiedDate] FROM SalesLT.CustomerAddress",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.SalesOrderDetail",
+        "description": "All data from SalesLT.SalesOrderDetail",
+        "columns": [
+          {
+            "name": "SalesOrderID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderID"
+          },
+          {
+            "name": "SalesOrderDetailID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderDetailID",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "OrderQty",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "OrderQty",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductID",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "UnitPrice",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "UnitPriceDiscount",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "UnitPriceDiscount",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "LineTotal",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "LineTotal",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 8
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.SalesOrderDetail",
+            "source": {
+              "query": "SELECT [SalesOrderID],[SalesOrderDetailID],[OrderQty],[ProductID],[UnitPrice],[UnitPriceDiscount],[LineTotal],[rowguid],[ModifiedDate] FROM SalesLT.SalesOrderDetail",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.SalesOrderHeader",
+        "description": "All data from SalesLT.SalesOrderHeader",
+        "columns": [
+          {
+            "name": "SalesOrderID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderID"
+          },
+          {
+            "name": "RevisionNumber",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "RevisionNumber",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "OrderDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "OrderDate",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "DueDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "DueDate",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ShipDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ShipDate",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "Status",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "Status",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "OnlineOrderFlag",
+            "dataType": "boolean",
+            "isNullable": false,
+            "sourceColumn": "OnlineOrderFlag",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "SalesOrderNumber",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "SalesOrderNumber",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "PurchaseOrderNumber",
+            "dataType": "string",
+            "sourceColumn": "PurchaseOrderNumber",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "AccountNumber",
+            "dataType": "string",
+            "sourceColumn": "AccountNumber",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "CustomerID",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "ShipToAddressID",
+            "dataType": "int64",
+            "sourceColumn": "ShipToAddressID",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "BillToAddressID",
+            "dataType": "int64",
+            "sourceColumn": "BillToAddressID",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "ShipMethod",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ShipMethod",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "CreditCardApprovalCode",
+            "dataType": "string",
+            "sourceColumn": "CreditCardApprovalCode",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "SubTotal",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "SubTotal",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "TaxAmt",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "TaxAmt",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "Freight",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "Freight",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "TotalDue",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "TotalDue",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "Comment",
+            "dataType": "string",
+            "sourceColumn": "Comment",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 21
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.SalesOrderHeader",
+            "source": {
+              "query": "SELECT [SalesOrderID],[RevisionNumber],[OrderDate],[DueDate],[ShipDate],[Status],[OnlineOrderFlag],[SalesOrderNumber],[PurchaseOrderNumber],[AccountNumber],[CustomerID],[ShipToAddressID],[BillToAddressID],[ShipMethod],[CreditCardApprovalCode],[SubTotal],[TaxAmt],[Freight],[TotalDue],[Comment],[rowguid],[ModifiedDate] FROM SalesLT.SalesOrderHeader",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.vProductModelCatalogDescription",
+        "description": "All data from SalesLT.vProductModelCatalogDescription",
+        "columns": [
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductModelID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "Summary",
+            "dataType": "string",
+            "sourceColumn": "Summary",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Manufacturer",
+            "dataType": "string",
+            "sourceColumn": "Manufacturer",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "Copyright",
+            "dataType": "string",
+            "sourceColumn": "Copyright",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "ProductURL",
+            "dataType": "string",
+            "sourceColumn": "ProductURL",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "WarrantyPeriod",
+            "dataType": "string",
+            "sourceColumn": "WarrantyPeriod",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "WarrantyDescription",
+            "dataType": "string",
+            "sourceColumn": "WarrantyDescription",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "NoOfYears",
+            "dataType": "string",
+            "sourceColumn": "NoOfYears",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "MaintenanceDescription",
+            "dataType": "string",
+            "sourceColumn": "MaintenanceDescription",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "Wheel",
+            "dataType": "string",
+            "sourceColumn": "Wheel",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "Saddle",
+            "dataType": "string",
+            "sourceColumn": "Saddle",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "Pedal",
+            "dataType": "string",
+            "sourceColumn": "Pedal",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "BikeFrame",
+            "dataType": "string",
+            "sourceColumn": "BikeFrame",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "Crankset",
+            "dataType": "string",
+            "sourceColumn": "Crankset",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "PictureAngle",
+            "dataType": "string",
+            "sourceColumn": "PictureAngle",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "PictureSize",
+            "dataType": "string",
+            "sourceColumn": "PictureSize",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "ProductPhotoID",
+            "dataType": "string",
+            "sourceColumn": "ProductPhotoID",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "Material",
+            "dataType": "string",
+            "sourceColumn": "Material",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "ProductLine",
+            "dataType": "string",
+            "sourceColumn": "ProductLine",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "Style",
+            "dataType": "string",
+            "sourceColumn": "Style",
+            "displayOrdinal": 21
+          },
+          {
+            "name": "RiderExperience",
+            "dataType": "string",
+            "sourceColumn": "RiderExperience",
+            "displayOrdinal": 22
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 23
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 24
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.vProductModelCatalogDescription",
+            "source": {
+              "query": "SELECT [ProductModelID],[Name],[Summary],[Manufacturer],[Copyright],[ProductURL],[WarrantyPeriod],[WarrantyDescription],[NoOfYears],[MaintenanceDescription],[Wheel],[Saddle],[Pedal],[BikeFrame],[Crankset],[PictureAngle],[PictureSize],[ProductPhotoID],[Material],[Color],[ProductLine],[Style],[RiderExperience],[rowguid],[ModifiedDate] FROM SalesLT.vProductModelCatalogDescription",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.vProductAndDescription",
+        "description": "All data from SalesLT.vProductAndDescription",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "ProductModel",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ProductModel",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Culture",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Culture",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Description",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.vProductAndDescription",
+            "source": {
+              "query": "SELECT [ProductID],[Name],[ProductModel],[Culture],[Description] FROM SalesLT.vProductAndDescription",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.vGetAllCategories",
+        "description": "All data from SalesLT.vGetAllCategories",
+        "columns": [
+          {
+            "name": "ParentProductCategoryName",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ParentProductCategoryName"
+          },
+          {
+            "name": "ProductCategoryName",
+            "dataType": "string",
+            "sourceColumn": "ProductCategoryName",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "ProductCategoryID",
+            "dataType": "int64",
+            "sourceColumn": "ProductCategoryID",
+            "displayOrdinal": 2
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.vGetAllCategories",
+            "source": {
+              "query": "SELECT [ParentProductCategoryName],[ProductCategoryName],[ProductCategoryID] FROM SalesLT.vGetAllCategories",
+              "dataSource": "SqlServer1 tcpanalytics-db-server.database.windows.net AdWorksSample"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "3c9bb995-80a2-46c7-8553-163d93e56621",
+        "fromTable": "SalesLT.CustomerAddress",
+        "fromColumn": "AddressID",
+        "toTable": "SalesLT.Address",
+        "toColumn": "AddressID"
+      },
+      {
+        "name": "f2124e29-3473-4463-b59c-33cac09daad8",
+        "fromTable": "SalesLT.CustomerAddress",
+        "fromColumn": "CustomerID",
+        "toTable": "SalesLT.Customer",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "2aaa276b-bd90-4f5b-ae21-c879ef6ce9df",
+        "fromTable": "SalesLT.Product",
+        "fromColumn": "ProductCategoryID",
+        "toTable": "SalesLT.ProductCategory",
+        "toColumn": "ProductCategoryID"
+      },
+      {
+        "name": "18109a36-7331-4669-830c-8a4f9af9c382",
+        "fromTable": "SalesLT.Product",
+        "fromColumn": "ProductModelID",
+        "toTable": "SalesLT.ProductModel",
+        "toColumn": "ProductModelID"
+      },
+      {
+        "name": "f4b06906-ac2d-44de-a3c7-0fff10b0b1c5",
+        "fromTable": "SalesLT.ProductModelProductDescription",
+        "fromColumn": "ProductDescriptionID",
+        "toTable": "SalesLT.ProductDescription",
+        "toColumn": "ProductDescriptionID"
+      },
+      {
+        "name": "9778f406-0334-4dfd-93c7-8daf0523da6f",
+        "fromTable": "SalesLT.ProductModelProductDescription",
+        "fromColumn": "ProductModelID",
+        "toTable": "SalesLT.ProductModel",
+        "toColumn": "ProductModelID"
+      },
+      {
+        "name": "2787db66-2996-49fb-8d49-a28e919aa70f",
+        "fromTable": "SalesLT.SalesOrderDetail",
+        "fromColumn": "ProductID",
+        "toTable": "SalesLT.Product",
+        "toColumn": "ProductID"
+      },
+      {
+        "name": "9b7b2af7-4dce-4322-92e0-d15b0c9dc669",
+        "fromTable": "SalesLT.SalesOrderDetail",
+        "fromColumn": "SalesOrderID",
+        "toTable": "SalesLT.SalesOrderHeader",
+        "toColumn": "SalesOrderID"
+      },
+      {
+        "name": "12d65616-b2d8-49db-ac4e-9cc5773c6ff7",
+        "fromTable": "SalesLT.SalesOrderHeader",
+        "fromColumn": "BillToAddressID",
+        "toTable": "SalesLT.Address",
+        "toColumn": "AddressID"
+      },
+      {
+        "name": "0cf535e0-cc32-46ef-a006-27cfc0e8d48f",
+        "fromTable": "SalesLT.SalesOrderHeader",
+        "fromColumn": "ShipToAddressID",
+        "toTable": "SalesLT.Address",
+        "toColumn": "AddressID",
+        "isActive": false
+      },
+      {
+        "name": "ca2ffe86-2109-4cb2-b677-01d2a39e5d63",
+        "fromTable": "SalesLT.SalesOrderHeader",
+        "fromColumn": "CustomerID",
+        "toTable": "SalesLT.Customer",
+        "toColumn": "CustomerID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "GitHubRepositoryUrl",
+        "value": "myrepository12"
+      }
+    ]
+  }
+}
