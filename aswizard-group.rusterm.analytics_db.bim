@@ -1,0 +1,436 @@
+{
+  "name": "analytics_db",
+  "description": "Imported database from sql server 'analytics-db-server.database.windows.net' and database 'analytics_db'",
+  "compatibilityLevel": 1200,
+  "model": {
+    "name": "analytics_db",
+    "description": "A Tabular data model at the 1200 compatibility level.",
+    "defaultMode": "directQuery",
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer analytics-db-server.database.windows.net analytics_db",
+        "description": "A data source definition that uses explicit sql server credentials from connection string",
+        "connectionString": "Provider=SQLNCLI11;Server=tcp:analytics-db-server.database.windows.net;Initial Catalog=analytics_db;Persist Security Info=False;User ID=analytics_admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30",
+        "impersonationMode": "impersonateServiceAccount"
+      }
+    ],
+    "tables": [
+      {
+        "name": "SalesLT.vProductModelCatalogDescription",
+        "description": "All data from SalesLT.vProductModelCatalogDescription",
+        "columns": [
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductModelID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "Summary",
+            "dataType": "string",
+            "sourceColumn": "Summary",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Manufacturer",
+            "dataType": "string",
+            "sourceColumn": "Manufacturer",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "Copyright",
+            "dataType": "string",
+            "sourceColumn": "Copyright",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "ProductURL",
+            "dataType": "string",
+            "sourceColumn": "ProductURL",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "WarrantyPeriod",
+            "dataType": "string",
+            "sourceColumn": "WarrantyPeriod",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "WarrantyDescription",
+            "dataType": "string",
+            "sourceColumn": "WarrantyDescription",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "NoOfYears",
+            "dataType": "string",
+            "sourceColumn": "NoOfYears",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "MaintenanceDescription",
+            "dataType": "string",
+            "sourceColumn": "MaintenanceDescription",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "Wheel",
+            "dataType": "string",
+            "sourceColumn": "Wheel",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "Saddle",
+            "dataType": "string",
+            "sourceColumn": "Saddle",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "Pedal",
+            "dataType": "string",
+            "sourceColumn": "Pedal",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "BikeFrame",
+            "dataType": "string",
+            "sourceColumn": "BikeFrame",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "Crankset",
+            "dataType": "string",
+            "sourceColumn": "Crankset",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "PictureAngle",
+            "dataType": "string",
+            "sourceColumn": "PictureAngle",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "PictureSize",
+            "dataType": "string",
+            "sourceColumn": "PictureSize",
+            "displayOrdinal": 16
+          },
+          {
+            "name": "ProductPhotoID",
+            "dataType": "string",
+            "sourceColumn": "ProductPhotoID",
+            "displayOrdinal": 17
+          },
+          {
+            "name": "Material",
+            "dataType": "string",
+            "sourceColumn": "Material",
+            "displayOrdinal": 18
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "displayOrdinal": 19
+          },
+          {
+            "name": "ProductLine",
+            "dataType": "string",
+            "sourceColumn": "ProductLine",
+            "displayOrdinal": 20
+          },
+          {
+            "name": "Style",
+            "dataType": "string",
+            "sourceColumn": "Style",
+            "displayOrdinal": 21
+          },
+          {
+            "name": "RiderExperience",
+            "dataType": "string",
+            "sourceColumn": "RiderExperience",
+            "displayOrdinal": 22
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 23
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 24
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.vProductModelCatalogDescription",
+            "source": {
+              "query": "SELECT [ProductModelID],[Name],[Summary],[Manufacturer],[Copyright],[ProductURL],[WarrantyPeriod],[WarrantyDescription],[NoOfYears],[MaintenanceDescription],[Wheel],[Saddle],[Pedal],[BikeFrame],[Crankset],[PictureAngle],[PictureSize],[ProductPhotoID],[Material],[Color],[ProductLine],[Style],[RiderExperience],[rowguid],[ModifiedDate] FROM SalesLT.vProductModelCatalogDescription",
+              "dataSource": "SqlServer analytics-db-server.database.windows.net analytics_db"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductDescription",
+        "description": "All data from SalesLT.ProductDescription",
+        "columns": [
+          {
+            "name": "ProductDescriptionID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductDescriptionID"
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Description",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 3
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductDescription",
+            "source": {
+              "query": "SELECT [ProductDescriptionID],[Description],[rowguid],[ModifiedDate] FROM SalesLT.ProductDescription",
+              "dataSource": "SqlServer analytics-db-server.database.windows.net analytics_db"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "“[|]’~<!--@/*$%^&#*/()?>,.*/\\ ",
+            "expression": "SUM('SalesLT.Product'[StandardCost])"
+          },
+          {
+            "name": "<script>alert(123)</script>",
+            "expression": "Average('SalesLT.vProductModelCatalogDescription'[Color])"
+          },
+          {
+            "name": "IchΘέλω να 休日شمسसमुद्र तट",
+            "expression": [
+              "",
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.Product",
+        "description": "All data from SalesLT.Product",
+        "columns": [
+          {
+            "name": "ProductID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "ProductNumber",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "ProductNumber",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "StandardCost",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "StandardCost",
+            "displayOrdinal": 4
+          },
+          {
+            "name": "ListPrice",
+            "dataType": "decimal",
+            "isNullable": false,
+            "sourceColumn": "ListPrice",
+            "displayOrdinal": 5
+          },
+          {
+            "name": "Size",
+            "dataType": "string",
+            "sourceColumn": "Size",
+            "displayOrdinal": 6
+          },
+          {
+            "name": "Weight",
+            "dataType": "decimal",
+            "sourceColumn": "Weight",
+            "displayOrdinal": 7
+          },
+          {
+            "name": "ProductCategoryID",
+            "dataType": "int64",
+            "sourceColumn": "ProductCategoryID",
+            "displayOrdinal": 8
+          },
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "sourceColumn": "ProductModelID",
+            "displayOrdinal": 9
+          },
+          {
+            "name": "SellStartDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "SellStartDate",
+            "displayOrdinal": 10
+          },
+          {
+            "name": "SellEndDate",
+            "dataType": "dateTime",
+            "sourceColumn": "SellEndDate",
+            "displayOrdinal": 11
+          },
+          {
+            "name": "DiscontinuedDate",
+            "dataType": "dateTime",
+            "sourceColumn": "DiscontinuedDate",
+            "displayOrdinal": 12
+          },
+          {
+            "name": "ThumbNailPhoto",
+            "dataType": "binary",
+            "sourceColumn": "ThumbNailPhoto",
+            "displayOrdinal": 13
+          },
+          {
+            "name": "ThumbnailPhotoFileName",
+            "dataType": "string",
+            "sourceColumn": "ThumbnailPhotoFileName",
+            "displayOrdinal": 14
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 15
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 16
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.Product",
+            "source": {
+              "query": "SELECT [ProductID],[Name],[ProductNumber],[Color],[StandardCost],[ListPrice],[Size],[Weight],[ProductCategoryID],[ProductModelID],[SellStartDate],[SellEndDate],[DiscontinuedDate],[ThumbNailPhoto],[ThumbnailPhotoFileName],[rowguid],[ModifiedDate] FROM SalesLT.Product",
+              "dataSource": "SqlServer analytics-db-server.database.windows.net analytics_db"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductModel",
+        "description": "All data from SalesLT.ProductModel",
+        "columns": [
+          {
+            "name": "ProductModelID",
+            "dataType": "int64",
+            "isNullable": false,
+            "sourceColumn": "ProductModelID"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1
+          },
+          {
+            "name": "CatalogDescription",
+            "dataType": "string",
+            "sourceColumn": "CatalogDescription",
+            "displayOrdinal": 2
+          },
+          {
+            "name": "rowguid",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "rowguid",
+            "displayOrdinal": 3
+          },
+          {
+            "name": "ModifiedDate",
+            "dataType": "dateTime",
+            "isNullable": false,
+            "sourceColumn": "ModifiedDate",
+            "displayOrdinal": 4
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductModel",
+            "source": {
+              "query": "SELECT [ProductModelID],[Name],[CatalogDescription],[rowguid],[ModifiedDate] FROM SalesLT.ProductModel",
+              "dataSource": "SqlServer analytics-db-server.database.windows.net analytics_db"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "1aaec8e5-3eaa-4766-90e6-f09cf91c8e77",
+        "fromTable": "SalesLT.Product",
+        "fromColumn": "ProductModelID",
+        "toTable": "SalesLT.ProductModel",
+        "toColumn": "ProductModelID"
+      }
+    ],
+
+      "annotations": [
+      {
+        "name": "GitHubRepositoryUrl",
+        "value": "myrepository12"
+      }
+    ]
+  }
+}
