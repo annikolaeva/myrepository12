@@ -4,7 +4,7 @@
   "compatibilityLevel": 1200,
   "model": {
     "name": "analytics_db",
-    "description": "A Tabular data model at the 1200 compatibility level.",
+    "description": "A Tabular data model at the 1200 compatibility level.commit",
     "defaultMode": "directQuery",
     "culture": "en-US",
     "dataSources": [
