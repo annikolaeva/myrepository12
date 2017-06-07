@@ -4,7 +4,7 @@
   "compatibilityLevel": 1200,
   "model": {
     "name": "Rusterm",
-    "description": "A Tabular data model at the 1200 compatibility levelcommit.",
+    "description": "A Tabular data model at the 1200 compatibility levelcommityeah.",
     "defaultMode": "directQuery",
     "culture": "en-US",
     "dataSources": [
@@ -662,7 +662,7 @@
         "toColumn": "ProductModelID"
       }
     ],
-     "annotations": [
+    "annotations": [
       {
         "name": "GitHubRepositoryUrl",
         "value": "myrepository12"
