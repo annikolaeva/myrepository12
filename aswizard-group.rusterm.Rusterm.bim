@@ -4,7 +4,7 @@
   "compatibilityLevel": 1200,
   "model": {
     "name": "Rusterm",
-    "description": "A Tabular data model at the 1200 compatibility levelcommityeah.",
+    "description": "A Tabular data model at the 1200 compatibility levelcommit1.",
     "defaultMode": "directQuery",
     "culture": "en-US",
     "dataSources": [
@@ -131,9 +131,13 @@
           {
             "name": "Measure",
             "expression": [
-              "Count('SalesLT.Customer'[NameStyle]) + ",
-              "Average('SalesLT.ProductModel'[ProductModelID])COUNT()"
+              "Count('SalesLT.Customer'[NameStyle]) ",
+              ""
             ]
+          },
+          {
+            "name": "sum",
+            "expression": "SUM('SalesLT.Product'[StandardCost])"
           }
         ]
       },
