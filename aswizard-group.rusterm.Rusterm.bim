@@ -4,8 +4,7 @@
   "compatibilityLevel": 1200,
   "model": {
     "name": "Rusterm",
-    "description": "A Tabular data model at the 1200 compatibility levelcommit1.",
-    "defaultMode": "directQuery",
+    "description": "A Tabular data model at the 1200 compatibility levelcommit12.",
     "culture": "en-US",
     "dataSources": [
       {
@@ -30,28 +29,36 @@
           {
             "name": "NameStyle",
             "dataType": "boolean",
+            "isHidden": true,
             "isNullable": false,
             "sourceColumn": "NameStyle",
-            "displayOrdinal": 1
+            "displayOrdinal": 1,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "Title",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "Title",
-            "displayOrdinal": 2
+            "displayOrdinal": 2,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "FirstName",
             "dataType": "string",
+            "isHidden": true,
             "isNullable": false,
             "sourceColumn": "FirstName",
-            "displayOrdinal": 3
+            "displayOrdinal": 3,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "MiddleName",
             "dataType": "string",
+            "isHidden": true,
             "sourceColumn": "MiddleName",
-            "displayOrdinal": 4
+            "displayOrdinal": 4,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "LastName",
@@ -64,7 +71,8 @@
             "name": "Suffix",
             "dataType": "string",
             "sourceColumn": "Suffix",
-            "displayOrdinal": 6
+            "displayOrdinal": 6,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "CompanyName",
@@ -219,20 +227,23 @@
             "dataType": "string",
             "isNullable": false,
             "sourceColumn": "Name",
-            "displayOrdinal": 1
+            "displayOrdinal": 1,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "ProductNumber",
             "dataType": "string",
             "isNullable": false,
             "sourceColumn": "ProductNumber",
-            "displayOrdinal": 2
+            "displayOrdinal": 2,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "Color",
             "dataType": "string",
             "sourceColumn": "Color",
-            "displayOrdinal": 3
+            "displayOrdinal": 3,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "StandardCost",
@@ -257,7 +268,8 @@
             "name": "ProductCategoryIDNew",
             "dataType": "int64",
             "sourceColumn": "ProductCategoryID",
-            "displayOrdinal": 8
+            "displayOrdinal": 8,
+            "displayFolder": "MyFolder"
           },
           {
             "name": "ProductModelID",
@@ -302,13 +314,26 @@
         ],
         "measures": [
           {
-            "name": "<sc<script>ript>alert()</sc</script>ript> ",
-            "expression": "<sc<script>ript>alert()</sc</script>ript> "
+            "name": "mesColor",
+            "expression": "SUM('SalesLT.Product'[Color])"
+          },
+          {
+            "name": "mesSize",
+            "expression": "SUM('SalesLT.Product'[Size])"
+          },
+          {
+            "name": "mesWeight",
+            "expression": "SUM('SalesLT.Product'[Weight])"
+          },
+          {
+            "name": "sumCoast",
+            "expression": "SUM('SalesLT.Product'[StandardCost])"
           }
         ],
         "hierarchies": [
           {
             "name": "Category",
+            "displayFolder": "MyFolder",
             "levels": [
               {
                 "name": "ProductCategoryID",
@@ -319,6 +344,26 @@
                 "name": "ProductID",
                 "ordinal": 1,
                 "column": "ProductID"
+              },
+              {
+                "name": "ProductNumber",
+                "ordinal": 2,
+                "column": "ProductNumber"
+              }
+            ]
+          },
+          {
+            "name": "Category1",
+            "levels": [
+              {
+                "name": "ProductModelID",
+                "ordinal": 0,
+                "column": "ProductModelID"
+              },
+              {
+                "name": "ProductCategoryID123",
+                "ordinal": 1,
+                "column": "ProductCategoryIDNew"
               }
             ]
           }
@@ -331,22 +376,28 @@
           {
             "name": "ProductModelID",
             "dataType": "int64",
+            "description": "1",
             "isNullable": false,
-            "sourceColumn": "ProductModelID"
+            "sourceColumn": "ProductModelID",
+            "displayFolder": "1"
           },
           {
             "name": "ProductDescriptionID",
             "dataType": "int64",
+            "description": "1",
             "isNullable": false,
             "sourceColumn": "ProductDescriptionID",
-            "displayOrdinal": 1
+            "displayOrdinal": 1,
+            "displayFolder": "1"
           },
           {
             "name": "Culture",
             "dataType": "string",
+            "description": "1",
             "isNullable": false,
             "sourceColumn": "Culture",
-            "displayOrdinal": 2
+            "displayOrdinal": 2,
+            "displayFolder": "1"
           }
         ],
         "partitions": [
@@ -355,6 +406,29 @@
             "source": {
               "query": "SELECT [ProductModelID],[ProductDescriptionID],[Culture],[rowguid],[ModifiedDate] FROM SalesLT.ProductModelProductDescription",
               "dataSource": "SqlServer analytics-db-server.database.windows.net analytics_db"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SalesLT.ProductAggregateTable",
+        "description": "All aggregated data from SalesLT.Product",
+        "columns": [
+          {
+            "name": "Name",
+            "dataType": "string",
+            "isNullable": false,
+            "sourceColumn": "Name",
+            "displayOrdinal": 1,
+            "displayFolder": "MyFolder"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SalesLT.ProductAggregateTable",
+            "source": {
+              "type": "calculated",
+              "expression": "TOPN(10 ,SUMMARIZE('SalesLT.Product', SellStartDate[SellStartDate], 'Total Sum Size', SUM('SalesLT.Product'[mesSize])),[MeasureSize])"
             }
           }
         ]
@@ -393,6 +467,10 @@
         "value": {
           "login": "annikolaeva"
         }
+      },
+      {
+        "name": "ASW-DEFAULT-DIAGRAM",
+        "value": "{\"Name\":\"default\",\"Tables\":[{\"TableName\":\"SalesLT.ProductDescription\",\"X\":1166,\"Y\":192,\"Z\":3,\"Width\":225,\"Height\":275},{\"TableName\":\"SalesLT.ProductModelProductDescription\",\"X\":783,\"Y\":379,\"Z\":2,\"Width\":225,\"Height\":275},{\"TableName\":\"SalesLT.Product\",\"X\":1056,\"Y\":346,\"Z\":2,\"Width\":225,\"Height\":275}]}"
       }
     ]
   }
